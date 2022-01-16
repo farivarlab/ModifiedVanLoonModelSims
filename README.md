@@ -3,6 +3,8 @@
 # ModifiedVanLoonModelSims
  Numerical simulations of a modified version of van Loon's model of binocular rivalry [A. M. van Loon, T. Knapen, H. S. Scholte, E. St John-Saaltink, T. H. Donner and V. A. F. Lamme, _Current Biology_, Vol. 23 Issue 9 Pages 823-827, 2013]. The modifications allows for assymetric modulation of model parameters in order to simulate effects of monocular deprivation. This work was submitted as a term paper for Computational Neuroscience NEUR603 at McGill University, Winter2015.
 
+<!--![](/vanLoonMod.png {width=40px height=400px})-->
+
 ## Instructions
 - See doIt.m for the main script.
 - See SebastienProulx_CompNeurosci_TermPaper.pdf for the term paper.
