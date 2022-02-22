@@ -27,13 +27,16 @@ curP.tau    = [curP.tau   curP.tau  ];
 tic
 [times,Var] = vanLoonSim(curP);
 plot_vanLoonSims(length(times)-1,1,times,Var)
+f1 = gcf;
 toc
 
-if 0
-    x1 = Var(:,1);
-    x2 = Var(:,2);
-    d = 500;
-    gridx = linspace(min([x1; x2]),max([x1; x2; 1]),d);
+xMin = 0.4;
+xMax = 1;
+if 1
+    x1 = Var(times>60,1);
+    x2 = Var(times>60,2);
+    d = 1000;
+    gridx = linspace(min([xMin; x1; x2]),max([x1; x2; xMax]),d);
     gridi = 1:1:d;
     [x1,x2] = meshgrid(gridx, gridx);
     [i1,i2] = meshgrid(gridi, gridi);
@@ -59,19 +62,41 @@ if 0
     save(mfilename,'x1','x2','v')
 end
 load(mfilename,'x1','x2','v')
-figure('WindowStyle','docked')
-imagesc(x1,x2,v)
+f2 = figure('WindowStyle','docked');
+hIm = imshow(repmat(uint8(zeros(size(v))),[1 1 3]));
+v = v - min(v(:));
+v = v./max(v(:));
+hIm.AlphaData = v;
+f2.Color = 'w';
 ax = gca;
+ax.Color = 'none';
+ax.XAxis.Visible = 'on';
+ax.YAxis.Visible = 'on';
 ax.YDir = 'normal';
-ax.PlotBoxAspectRatio = [1 1 1];
-ax.DataAspectRatio  = [1 1 1];
-xlim([0.4 1])
-ylim([0.4 1])
-color = colormap(gray);
-color = color(end:-1:1,:);
-colormap(ax,color)
-grid on
+ax.XTick  = [];
+ax.YTick  = [];
 
+
+f3 = figure('WindowStyle','docked');
+plot(Var(times>60,1:2))
+ylim([xMin xMax])
+
+return
+
+x1 = Var(times>60,1);
+    x2 = Var(times>60,2);
+    
+
+%% clean
+figure(f1)
+delete(f1.Children(1))
+tmp = axes();
+f1.Children(2).Position = tmp.Position;
+delete(tmp)
+
+
+
+return
 
 
 
