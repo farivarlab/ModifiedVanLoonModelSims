@@ -79,15 +79,17 @@ ax.YTick = interp1(x1,1:length(x1),xMin:0.1:xMax);
 ax.YTickLabel = cellstr(num2str((xMin:0.1:xMax)'));
 ax.XTick = ax.YTick;
 ax.XTickLabel = ax.YTickLabel;
+
+% vq = interp1(x,v,xq)
+
+ax.XTick  = [];
+ax.YTick  = [];
 grid on
+
 
 f3 = figure('WindowStyle','docked');
 plot(Var(times>60,1:2))
 ylim([xMin xMax])
-grid on
-ax = gca;
-ax.XGrid = 'off';
-
 
 return
 
