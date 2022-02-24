@@ -1,4 +1,5 @@
 [![CC BY 4.0][cc-by-shield]][cc-by]
+[![DOI](https://zenodo.org/badge/448620004.svg)](https://zenodo.org/badge/latestdoi/448620004)
 
 # Model Simulation of Binocular Rivalry for the Study of Monocular Deprivation
  Numerical simulations of a modified version of van Loon's model of binocular rivalry [A. M. van Loon, T. Knapen, H. S. Scholte, E. St John-Saaltink, T. H. Donner and V. A. F. Lamme, _Current Biology_, Vol. 23 Issue 9 Pages 823-827, 2013]. The modifications allows for assymetric modulation of model parameters in order to simulate effects of monocular deprivation. This work was submitted as a term paper for Computational Neuroscience NEUR603 at McGill University, Winter2015 (see [SebastienProulx_CompNeurosci_TermPaper.pdf](SebastienProulx_CompNeurosci_TermPaper.pdf)).
