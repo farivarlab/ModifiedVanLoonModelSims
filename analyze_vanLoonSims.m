@@ -5,7 +5,7 @@ close all
 
 code = char(codeAll);
 
-startTime = 100;
+startTime = 250;
 
 if 1
 %% Compile durations
@@ -22,7 +22,7 @@ for curIter = 1:10
         
         for i = 1:length(pR.(char(param)))
             if curIter==1 && strcmp(char(param),'sigma') && i>=3
-                plot_vanLoonSims(length(times.(char(param)){i})-1,1,times.(char(param)){i},Var.(char(param)){i},pR.(char(param))(i),p.I)
+                plot_vanLoonSims(1000,1,times.(char(param)){i},Var.(char(param)){i},pR.(char(param))(i),p.I)
             end
             cur_times = times.(char(param)){i};
             cur_Var = Var.(char(param)){i};
@@ -37,12 +37,6 @@ for curIter = 1:10
             X1dur = []; X2dur = [];
             
             
-%             if strcmp(param,'I') && i>=5
-%                 nDataPts = 20000;
-%                 offSet = 50000;
-%                 plot_vanLoonSims(nDataPts,offSet,cur_times,cur_Var)
-%                 keyboard
-%             end
             
             for ii = 1:length(crossings_ind)-1
                 if crossings(crossings_ind(ii))<0 %X1 period

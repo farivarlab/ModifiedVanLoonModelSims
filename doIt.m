@@ -1,15 +1,19 @@
+%% NEUR603 term paper
 run_vanLoonSims_assymetric
 run_vanLoonSims_symetric
 analyze_vanLoonSims
 visualize_vanLoonSims
 
+
+
+
+
+%% Extra Experimental Stuff
 run_vanLoonSims_example
 
 run_vanLoonSims_symetric_gammaOnly
 analyze_vanLoonSims_gammaOnly
 invivoVsInvitro
-
-
 
 run_vanLoonSims_symetric_gammaOnly_triState
 analyze_vanLoonSims_gammaOnly_triState

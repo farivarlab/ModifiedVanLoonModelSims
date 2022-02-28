@@ -9,7 +9,7 @@ p.tau     = 125;
 p.sigmoidParam(1) = 0.5;
 p.sigmoidParam(2) = 18;
 p.sigmoidParam(3) = 1;
-p.endTime = 5000;%5000
+p.endTime = 1000;%5000
 % p.endTime = 10;
 
 p.startingI = [0 0];
@@ -22,7 +22,7 @@ pR.gamma	= linspace(2.6,3.4,7);
 pR.sigma    = [0.001 0.002 0.003 0.006 0.015];%linspace(0.001,0.015,10);
 pR.alpha    = linspace(3.6,4.4,7);
 
-for curIter = 1:10
+for curIter = 1:2
     for param = {'gamma' 'I' 'sigma' 'alpha'}
         for i = 1:length(pR.(char(param)))
             display(['Iter ' num2str(curIter)])
@@ -59,7 +59,7 @@ for curIter = 1:10
             
             tic
             [times.(char(param)){i},Var.(char(param)){i}] = vanLoonSim(curP);
-%             plot_vanLoonSims(length(times.(char(param)){i})-1,1,times.(char(param)){i},Var.(char(param)){i})
+%             plot_vanLoonSims(1000,1,times.(char(param)){i},Var.(char(param)){i})
             toc
         end
     end

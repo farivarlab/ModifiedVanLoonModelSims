@@ -45,7 +45,7 @@ for curIter = 1:10
             
             tic
             [times.(char(param)){i},Var.(char(param)){i}] = vanLoonSim(curP);
-%             plot_vanLoonSims(length(times.(char(param)){i})-1,1,times.(char(param)){i},Var.(char(param)){i})
+            plot_vanLoonSims(1000,1,times.(char(param)){i},Var.(char(param)){i})
             toc
         end
     end
