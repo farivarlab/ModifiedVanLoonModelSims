@@ -61,8 +61,9 @@ br.tro = br.tro +  min(br.vo);
 
 
 f = figure('WindowStyle','docked');
-plot(gaba.vo,br.vo,'o'); hold on
-yyaxis right
+hPlot = plot(gaba.vo,br.vo,'.'); hold on
+hPlot.MarkerSize = hPlot.MarkerSize*2;
+% hPlot.MarkerFaceColor = hPlot.Color;
 plot(gaba.tro,br.tro)
 ax = gca;
 xlim auto
@@ -70,7 +71,9 @@ ax.PlotBoxAspectRatio = [1 1 1];
 ax.Color='none';
 f.Color = 'none';
 saveas(f,mfilename,'svg')
-
+f.Color = 'w';
+xlabel('GABA ratio')
+ylabel('percept mean duration')
 
 [RHO,PVAL] = corr(gaba.vo,br.vo);
 

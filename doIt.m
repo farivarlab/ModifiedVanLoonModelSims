@@ -3,11 +3,15 @@ run_vanLoonSims_symetric
 analyze_vanLoonSims
 visualize_vanLoonSims
 
+run_vanLoonSims_example
 
 run_vanLoonSims_symetric_gammaOnly
 analyze_vanLoonSims_gammaOnly
 invivoVsInvitro
-% visualize_vanLoonSims_invivo
 
 
 
+run_vanLoonSims_symetric_gammaOnly_triState
+analyze_vanLoonSims_gammaOnly_triState
+
+run_vanLoonSims_phaseSpace2
