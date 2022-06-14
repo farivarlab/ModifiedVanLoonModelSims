@@ -42,7 +42,7 @@ times2{end+1} = cat(1,times,curTimes+times(end));
 Var2{end+1}   = cat(1,Var,curVar);
 
 
-%% increase gamma on the right side
+%% increase gamma2 on the right side
 i = i+1; curP.endTime = p.endTime(i);
 curP.gamma         = [3 4.3];
 curP.startingI = Var(end,[1 2]);

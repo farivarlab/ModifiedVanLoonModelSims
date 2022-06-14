@@ -42,7 +42,7 @@ times2{end+1} = cat(1,times,curTimes+times(end));
 Var2{end+1}   = cat(1,Var,curVar);
 
 
-%% increase alpha on the left side
+%% decrease alpha1
 i = i+1; curP.endTime = p.endTime(i);
 curP.alpha         = [2.5 4];
 curP.startingI = Var(end,[1 2]);
